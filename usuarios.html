@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SoldoradoCreaciones</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -15,299 +18,323 @@
 
     <!--SUB MENU SUPERIOR IZQUIERDA-->
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fa-solid fa-user-large"></i>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <div class="dropdown-divider"></div>
-          <a href="index.html" class="dropdown-item">
-            <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="fa-solid fa-user-large"></i>
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fa-solid fa-user-large"></i> Perfil
-          </a>
-        </div>
-      </li>
-  </nav>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <div class="dropdown-divider"></div>
+            <a href="index.html" class="dropdown-item">
+              <i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="miperfiladmin.html" class="dropdown-item">
+              <i class="fa-solid fa-user-large"></i> Perfil
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
 
-  <!--SIDEBAR LATERAL-->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="" class="brand-link">
-      <img src="dist/img/Sol.png" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">SoldoradoCreaciones</span>
-    </a>
-    <div class="sidebar">
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/Avatar.png" class="img-circle elevation-2" alt="User Image">
+    <!--SIDEBAR LATERAL-->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <a href="" class="brand-link">
+        <img src="dist/img/Sol.png" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">SoldoradoCreaciones</span>
+      </a>
+      <div class="sidebar">
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="dist/img/Avatar.png" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Andrud Acosta</a>
+          </div>
         </div>
-        <div class="info">
-          <a href="#" class="d-block">Andrud Acosta</a>
-        </div>
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="dashboard.html" class="nav-link" id="rol">
+                <i class="fa-solid fa-table-columns"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="roles.html" class="nav-link" id="rol">
+                <i class="fa-solid fa-gear"></i>
+                <p>
+                  Roles
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="usuarios.html" class="nav-link" id="usuarios">
+                <i class="fa-solid fa-user"></i>
+                <p>
+                  Usuarios
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="clientes.html" class="nav-link" id="clientes">
+                <i class="fa-solid fa-users"></i>
+                <p>
+                  Clientes
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="productos.html" class="nav-link" id="productos">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <p>
+                  Productos
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pedidos.html" class="nav-link" id="pedidos">
+                <i class="fa-solid fa-cart-flatbed"></i>
+                <p>
+                  Pedidos
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="ventas.html" class="nav-link" id="ventas">
+                <i class="fa-solid fa-cash-register"></i>
+                <p>
+                  Ventas
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            <a href="dashboard.html" class="nav-link" id="rol">
-              <i class="fa-solid fa-table-columns"></i>
-              <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="roles.html" class="nav-link" id="rol">
-              <i class="fa-solid fa-gear"></i>
-              <p>
-                Roles
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="usuarios.html" class="nav-link" id="usuarios">
-              <i class="fa-solid fa-user"></i>
-              <p>
-                Usuarios
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="clientes.html" class="nav-link" id="clientes">
-              <i class="fa-solid fa-users"></i>
-              <p>
-                Clientes
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="productos.html" class="nav-link" id="productos">
-              <i class="fa-solid fa-boxes-stacked"></i>
-              <p>
-                Productos
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="pedidos.html" class="nav-link" id="pedidos">
-              <i class="fa-solid fa-cart-flatbed"></i>
-              <p>
-                Pedidos
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="ventas.html" class="nav-link" id="ventas">
-              <i class="fa-solid fa-cash-register"></i>
-              <p>
-                Ventas
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
+    </aside>
 
-  <!--CONTENIDO DE LA PAGINA-->
-  <div class="content-wrapper" id="contenido">
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-12">
-            <div>
-              <h1>USUARIOS <i class="fa-solid fa-user"></i></h1>
-              <hr>
+    <!--CONTENIDO DE LA PAGINA-->
+    <div class="content-wrapper" id="contenido">
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <div>
+                <h1>USUARIOS <i class="fa-solid fa-user"></i></h1>
+                <hr>
+              </div>
+              <div class="d-flex col-md-3 mt-3">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearUsuario"><i
+                    class="fa-solid fa-plus"></i> Agregar Usuario</button>
+              </div>
+              <div>
+                <form class="d-flex col-md-3 mt-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar Usuario" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
             </div>
-            <div class="d-flex col-md-3 mt-3">
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearUsuario"><i class="fa-solid fa-plus"></i> Agregar Usuario</button>
-            </div>
-            <div>
-            <form class="d-flex col-md-3 mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Buscar Usuario" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
-          </div>
           </div>
         </div>
       </div>
+      <section class="content">
+        <div class="container-fluid">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombres</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Acceso</th>
+                <th scope="col">Editar</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Andrud Martin</td>
+                <td>Acosta Arboleda</td>
+                <td>1000761284</td>
+                <td>3059392253</td>
+                <td>amacosta@gmail.com</td>
+                <td>Administrador</td>
+                <td><i class="fa-solid fa-toggle-on"></i></td>
+                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i>
+                </td>
+                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"
+                    data-bs-target="#elimiarUsuario"></i></td>
+              </tr>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cristian David</td>
+                <td>Jaramillo Londoño</td>
+                <td>1235123212</td>
+                <td>2534123532</td>
+                <td>crisitanjaramillo@gmail.com</td>
+                <td>Administrador</td>
+                <td><i class="fa-solid fa-toggle-off"></i></td>
+                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i>
+                </td>
+                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"
+                    data-bs-target="#elimiarUsuario"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
-    <section class="content">
-      <div class="container-fluid">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Nombres</th>
-              <th scope="col">Apellidos</th>
-              <th scope="col">Documento</th>
-              <th scope="col">Telefono</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Rol</th>
-              <th scope="col">Editar</th>
-              <th scope="col">Eliminar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Andrud Martin</td>
-              <td>Acosta Arboleda</td>
-              <td>1000761284</td>
-              <td>3059392253</td>
-              <td>amacosta@gmail.com</td>
-              <td>Administrador</td>
-              <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i></td>
-              <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#elimiarUsuario"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+
+    <!--PIE DE PAGINA-->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2022 <a>CreaSoft</a>.</strong>
+    </footer>
   </div>
 
-  <!--PIE DE PAGINA-->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a>CreaSoft</a>.</strong>
-  </footer>
-</div>
-
-<!--MODAL CREAR USUARIO-->
-<div class="modal fade" id="crearUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="row g-3 mt-2" name="formcrea" action="validacion">
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nombres</label>
-            <input type="text" class="form-control" id="inputEmail4" name="nombres" required /> 
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="inputPassword4" name="apellidos" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Documento</label>
-            <input type="number" class="form-control" id="inputEmail4" name="documento" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Telefono</label>
-            <input type="number" class="form-control" id="inputPassword4" name="telefono" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">Correo Electronico</label>
-            <input type="email" class="form-control" id="inputCity" name="correo" required />
-          </div>
-          <div class="col-md-6">
-            <label for="inputZip" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="inputZip" name="password" required/>
-          </div>
-          <div class="col-12">
-            <label for="inputCity" class="form-label">Rol</label>
-            <select class="form-select" aria-label="Default select example" name="rol" id="rol">
-              <option selected>Selecciona rol</option>
-              <option value="1">Administrador</option>
-              <option value="2">Cliente</option>
-            </select>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" onclick="validacionCrear()">Crear</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--MODAL EDITAR USUARIO-->
-<div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Usuario</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="row g-3 mt-2" name="formeditar" action="validacion">
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Nombres</label>
-            <input type="text" class="form-control" id="inputEmail4" name="nombres" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Apellidos</label>
-            <input type="text" class="form-control" id="inputPassword4" name="apellidos" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Documento</label>
-            <input type="number" class="form-control" id="inputEmail4" name="documento" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Telefono</label>
-            <input type="number" class="form-control" id="inputPassword4" name="telefono" required/>
-          </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">Correo Electronico</label>
-            <input type="email" class="form-control" id="inputCity" name="correo" required/>
-          </div>
-          <div class="col-12">
-            <label for="inputCity" class="form-label">Rol</label>
-            <select class="form-select" aria-label="Default select example" name="rol" id="rol" value="1" >
-              <option selected>Selecciona rol</option>
-              <option value="1">Administrador</option>
-              <option value="2">Cliente</option>
-            </select>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" onclick="validacionEditar()">Crear</button>
+  <!--MODAL CREAR USUARIO-->
+  <div class="modal fade" id="crearUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3 mt-2" name="formcrea" action="validacion">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="inputEmail4" name="nombres" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="inputPassword4" name="apellidos" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Documento</label>
+              <input type="number" class="form-control" id="inputEmail4" name="documento" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Telefono</label>
+              <input type="number" class="form-control" id="inputPassword4" name="telefono" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Correo Electronico</label>
+              <input type="email" class="form-control" id="inputCity" name="correo" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputZip" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="inputZip" name="password" required />
+            </div>
+            <div class="col-12">
+              <label for="inputCity" class="form-label">Rol</label>
+              <select class="form-select" aria-label="Default select example" name="rol" id="rol">
+                <option selected>Selecciona rol</option>
+                <option value="1">Administrador</option>
+                <option value="2">Cliente</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="validacionCrear()">Crear</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!--MODAL ELIMINAR-->
-<div class="modal fade" id="elimiarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Usuario</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ¿Esta seguro de eliminar este usuario?<br>
-        Ten en cuenta que se borraran los registros asociados
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
+  <!--MODAL EDITAR USUARIO-->
+  <div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-3 mt-2" name="formeditar" action="validacion">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Nombres</label>
+              <input type="text" class="form-control" id="inputEmail4" name="nombres" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="inputPassword4" name="apellidos" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Documento</label>
+              <input type="number" class="form-control" id="inputEmail4" name="documento" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Telefono</label>
+              <input type="number" class="form-control" id="inputPassword4" name="telefono" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Correo Electronico</label>
+              <input type="email" class="form-control" id="inputCity" name="correo" required />
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Acceso</label>
+              <div><i class="fa-solid fa-toggle-on"></i></div>
+            </div>
+            <div class="col-12">
+              <label for="inputCity" class="form-label">Rol</label>
+              <select class="form-select" aria-label="Default select example" name="rol" id="rol" value="1">
+                <option selected>Selecciona rol</option>
+                <option value="1">Administrador</option>
+                <option value="2">Cliente</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="validacionEditar()">Crear</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <!--MODAL ELIMINAR-->
+  <div class="modal fade" id="elimiarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Esta seguro de eliminar este usuario?<br>
+          Ten en cuenta que se borraran los registros asociados
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
 </body>
 <script> myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+  const myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-}) </script>
+  myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+  }) </script>
 
 <script src="./dist/js/validacionusuario.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
@@ -315,5 +342,7 @@ myModal.addEventListener('shown.bs.modal', () => {
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <script src="dist/js/adminlte.js"></script>
 <script src="https://kit.fontawesome.com/f669cfd668.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 </html>
