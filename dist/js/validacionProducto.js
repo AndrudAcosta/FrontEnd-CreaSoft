@@ -24,5 +24,7 @@ function validacionCrearE(){
         window.location="./productos.html"
     }
 }
-
+function ComfirmElim(){
+    alert("Eliminado")
+}
 

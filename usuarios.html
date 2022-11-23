@@ -54,7 +54,7 @@
             <img src="dist/img/Avatar.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Andrud Acosta</a>
+            <a href="miperfiladmin.html" class="d-block">Andrud Acosta</a>
           </div>
         </div>
         <nav class="mt-2">
@@ -127,7 +127,7 @@
           <div class="row mb-2">
             <div class="col-sm-12">
               <div>
-                <h1>USUARIOS <i class="fa-solid fa-user"></i></h1>
+                <h1>Usuarios <i class="fa-solid fa-user"></i></h1>
                 <hr>
               </div>
               <div class="d-flex col-md-3 mt-3">
@@ -170,11 +170,9 @@
                 <td>3059392253</td>
                 <td>amacosta@gmail.com</td>
                 <td>Administrador</td>
-                <td><i class="fa-solid fa-toggle-on"></i></td>
-                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i>
-                </td>
-                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"
-                    data-bs-target="#elimiarUsuario"></i></td>
+                <td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td>
+                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i></td>
+                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"data-bs-target="#elimiarUsuario"></i></td>
               </tr>
               <tr>
                 <th scope="row">1</th>
@@ -184,11 +182,9 @@
                 <td>2534123532</td>
                 <td>crisitanjaramillo@gmail.com</td>
                 <td>Administrador</td>
-                <td><i class="fa-solid fa-toggle-off"></i></td>
-                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i>
-                </td>
-                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"
-                    data-bs-target="#elimiarUsuario"></i></td>
+                <td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td>
+                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i></td>
+                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"data-bs-target="#elimiarUsuario"></i></td>
               </tr>
             </tbody>
           </table>
@@ -286,12 +282,11 @@
             </div>
             <div class="col-md-6">
               <label for="inputCity" class="form-label">Acceso</label>
-              <div><i class="fa-solid fa-toggle-on"></i></div>
+              <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div>
             </div>
             <div class="col-12">
               <label for="inputCity" class="form-label">Rol</label>
               <select class="form-select" aria-label="Default select example" name="rol" id="rol" value="1">
-                <option selected>Selecciona rol</option>
                 <option value="1">Administrador</option>
                 <option value="2">Cliente</option>
               </select>
@@ -320,7 +315,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="validacioneliminar()">Confirmar</button>
         </div>
       </div>
     </div>

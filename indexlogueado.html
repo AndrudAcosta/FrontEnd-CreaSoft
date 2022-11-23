@@ -89,8 +89,8 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#EditarCat"></i></a>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-plus"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#agregarP"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" onclick="AgregarInstant()"><i class="fa-solid fa-cart-plus"></i></a>
                   </div>
                   
                   <a type="submit" class="link-warning">
@@ -111,8 +111,8 @@
                 <p class="card-text">Con este arbol podras asustar a todos tus amigos, bien bien melo</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#EditarCat"></i></a>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-plus"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#agregarP"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" onclick="AgregarInstant()"><i class="fa-solid fa-cart-plus"></i></a>
                   </div>
                   <a type="submit" class="link-warning">
                     <h3>$ 100.000</h3></i>
@@ -132,8 +132,8 @@
                 <p class="card-text">Que mejor regalo para conquistar que una Ancheta de verdad</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#EditarCat"></i></a>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-plus"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#agregarP"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" onclick="AgregarInstant()"><i class="fa-solid fa-cart-plus"></i></a>
                   </div>
                   <a type="submit" class="link-warning">
                     <h3>$ 100.000</h3></i>
@@ -153,8 +153,8 @@
                 <p class="card-text">Decora tu hogar con este maravilloso trio de negras africanas</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#EditarCat"></i></a>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-plus"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#agregarP"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" onclick="AgregarInstant()"><i class="fa-solid fa-cart-plus"></i></a>
                   </div>
                   <a type="submit" class="link-warning">
                     <h3>$ 100.000</h3></i>
@@ -174,8 +174,8 @@
                 <p class="card-text">Que mejor forma de apoyar a marvel que con una taza del best tree</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#EditarCat"></i></a>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-plus"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#agregarP"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" onclick="AgregarInstant()"><i class="fa-solid fa-cart-plus"></i></a>
                   </div>
                   <a type="submit" class="link-warning">
                     <h3>$ 100.000</h3></i>
@@ -195,8 +195,8 @@
                 <p class="card-text">Tambien contamos con manualidades para los fanaticos de DC</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#EditarCat"></i></a>
-                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-cart-plus"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-eye"  data-bs-toggle="modal" data-bs-target="#agregarP"></i></a>
+                    <a type="button" class="btn btn-sm btn-outline-secondary" onclick="AgregarInstant()"><i class="fa-solid fa-cart-plus"></i></a>
                   </div>
                   <a type="submit" class="link-warning">
                     <h3>$ 100.000</h3></i>
@@ -209,8 +209,10 @@
       </div>
     </div>
   </main>
-  <!-- Modal -->
-  <div class="modal fade" id="EditarCat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+  <!-- Modal AGREGAR PRODUCTO CARRITO -->
+  <div class="modal fade" id="agregarP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -231,10 +233,10 @@
               </div>
             </div>
           </div>
-          <form class="row g-3 mt-2">
+          <form class="row g-3 mt-2"  name="formAgregarlog" action="AgregarCarritoLog">
             <div class="col-md-6">
               <label for="inputCity" class="form-label">Tamaño</label>
-              <select class="form-select" aria-label="Default select example" name="tamano" id="tamano">
+              <select class="form-select" aria-label="Default select example" name="tamano" >
                 <option selected>Grande</option>
                 <option value="1">Mediano</option>
                 <option value="2">Pequeño</option>
@@ -242,7 +244,7 @@
             </div>
             <div class="col-md-6">
               <label for="inputCity" class="form-label">Color</label>
-              <select class="form-select" aria-label="Default select example" name="color" id="color">
+              <select class="form-select" aria-label="Default select example" name="color" >
                 <option selected>Amarillo</option>
                 <option value="1">Azul</option>
                 <option value="2">Rojo</option>
@@ -256,7 +258,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
-          <a href="carrito.html"  type="button" class="btn btn-primary btn-success" >Agregar al carrito</a>
+          <button type="button" class="btn btn-success" onclick="AgregarCarritoLog()">Agregar al carrito</button>
         </div>
       </div>
     </div>
@@ -360,6 +362,7 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+<script src="./dist/js/validacionesIndex.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>

@@ -53,7 +53,7 @@
             <img src="dist/img/Avatar.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="miperfiladmin.html" class="d-block">Andrud Acosta</a>
+            <a href="miperfiladmin.html" class="d-block">Andrud Acosta </a>
           </div>
         </div>
         <nav class="mt-2">
@@ -126,18 +126,19 @@
           <div class="row mb-2">
             <div class="col-sm-12">
               <div>
-                <h1>Productos <i class="fa-solid fa-boxes-stacked"></i></h1>
+                <h1>Pedidos <i class="fa-solid fa-cart-flatbed"></i></h1>
                 <hr>
               </div>
               <div class="d-grid gap-2 d-md-block">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearProducto"><i
-                    class="fa-solid fa-plus"></i> Agregar Producto</button>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearEntrada"><i
-                      class="fa-solid fa-file"></i> Agregar Entradas</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearPedido"><i
+                    class="fa-solid fa-plus"></i> Nuevo Pedido</button>
+                  
               </div>
+               <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crearentradapedido"><i
+                      class="fa-solid fa-file"></i> Agregar Entradas</button>-->
               <div>
                 <form class="d-flex col-md-3 mt-3" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Buscar Producto" aria-label="Search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar Pedido" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
               </div>
@@ -151,30 +152,29 @@
             <thead>
               <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Descripcion</th>
-                <th scope="col">Material</th>
-                <th scope="col">Stock</th>
-                <th scope="col">Tamaño</th>
-                <th scope="col">Color</th>
-                <th scope="col">Precio</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Contacto</th>
+                <th scope="col">Total</th>
+                <th scope="col">Responsable</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Fecha Pedido</th>
+                <th scope="col">Fecha estado</th>
                 <th scope="col">Editar</th>
-                <th scope="col">Eliminar</th>
-                <th scope="col">Entradas</th>
+                <th scope="col">Ver</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">1</th>
                 <td>Papa noel</td>
-                <td>Escultura de alta calidad </td>
-                <td>Ceramica</td>
-                <td>100</td>
-                <td>grande</td>
-                <td>azul</td>
-                <td>$100</td>
-                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarProducto"></i></td>
-                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#elimiarProducto"></i></td>
+                <td>300223432</td>
+                <td>$150.000</td>
+                <td>Administrador</td>
+                <td>Produccion</td>
+                <td>06/11/2022</td>
+                <td>06/11/2022</td>
+                
+                <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#EditarPedido"></i></td>
                 <td><i class="fa-solid fa-eye" type="button" data-bs-toggle="modal" data-bs-target="#HistorialE"></i></td>
               </tr>
             </tbody>
@@ -192,76 +192,56 @@
  <!--PRODUCTOS-->
 
   <!--MODAL CREAR PRODUCTO-->
-  <div class="modal fade " id="crearProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade " id="crearPedido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Producto</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Pedido</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <form class="row g-3 mt-2" name="formcrea" action="validacionProducto">
-            <div class="col-md-6">
+            <div class="col-md-12">
               <label for="inputEmail4" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="inputEmail4" name="nombre" required />
             </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Descripcion</label>
-              <input type="text" class="form-control" id="inputPassword4" name="descripcion" required />
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Material</label>
-              <input type="text" class="form-control" id="inputEmail4" name="material" required />
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Stock</label>
-              <input type="number" class="form-control" id="inputPassword4" name="stock" required />
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Tamaño</label>
-              <select class="form-select" aria-label="Default select example" name="tamano" id="tamano">
-                <option selected>Grande</option>
-                <option value="1">Mediano</option>
-                <option value="2">Pequeño</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Color</label>
-              <select class="form-select" aria-label="Default select example" name="color" id="color">
-                <option selected>Amarillo</option>
-                <option value="1">Azul</option>
-                <option value="2">Rojo</option>
-              </select>
-            </div>
-
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Precio</label>
-              <input type="number" class="form-control" id="inputEmail4" name="precio" required />
+            <div class="d-grid gap-2 d-md-block">
+              <button type="button" class="btn btn-secondary" 
+              data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+                  <button type="button" class="btn btn-primary"  
+                    onclick="validacionCrear()">
+                    <i class="fa-solid fa-file"></i> Crear</button>
             </div>
           </form>
           <div class="row g-3 mt-2">
             <table class="table">
               <thead>
                 <tr>
-                  <th scope="col">Productos agregados</th>
-                  <th scope="col">Color</th>
-                  <th scope="col">Tamaño</th>
-                  <th scope="col">Stock</th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">V/U</th>
+                  <th scope="col">Total Producto</th>
+                  <th scope="col">Acciones</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Marrano</td>
-                  <td>verde</td>
-                  <td>mediano</td>
-                  <th scope="row">6</th>
+                  <td>1</td>
+                  <td>Muñeco de Nieve</td>
+                  <td>4</td>
+                  <th scope="row">$20.000</th>
+                  <th scope="row">$80.000</th>
+                  <th ><i class="fa-solid fa-trash" type="button"></i></th>
                 </tr>
               </tbody>
             </table>
-          </div>
+            </div>
+            <input type="text" value="$20.000" disabled  style="width: 66px;">
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" onclick="validacionCrear()">Crear</button>
+            <button type="button" class="btn btn-outline-dark" 
+            data-bs-toggle="modal" data-bs-target="#crearentradapedido">Adicionar Pedido</button>
+            
           </div>
         </div>
       </div>
@@ -272,53 +252,37 @@
 
 
 
-  <!--MODAL EDITAR PRODUCTO-->
-  <div class="modal fade" id="editarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!--MODAL EDITAR PEDIDO-->
+  <div class="modal fade" id="EditarPedido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Producto<h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Pedido<h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="row g-3 mt-2" name="formeditar" action="validacionProducto">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="inputEmail4" name="nombre" required />
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Descripcion</label>
-              <input type="text" class="form-control" id="inputPassword4" name="descripcion" required />
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Material</label>
-              <input type="text" class="form-control" id="inputEmail4" name="material" required />
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Stock</label>
-              <input type="number" class="form-control" id="inputPassword4" name="stock" required />
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Tamaño</label>
-              <select class="form-select" aria-label="Default select example" name="tamano" id="tamano">
-                <option selected>Grande</option>
-                <option value="1">Mediano</option>
-                <option value="2">Pequeño</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">Color</label>
-              <select class="form-select" aria-label="Default select example" name="color" id="color">
-                <option selected>Amarillo</option>
-                <option value="1">Azul</option>
-                <option value="2">Rojo</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Precio</label>
-              <input type="number" class="form-control" id="inputPassword4" name="precio" required />
-            </div>
-          </form>
+
+          <div class="row g-2 mt-2 col-md-12 ">
+          <div class="col-md-2">
+          Cliente:<input type="text" value="Escribe">
+        </div>
+          <div class="col-md-2">
+          Cliente:<input type="text" value="Escribe">
+        </div>
+          <div class="col-md-2">
+          Cliente:<input type="text" value="Escribe">
+        </div>
+          <div class="col-md-2">
+          Cliente:<input type="text" value="Escribe">
+        </div>
+          <div class="col-md-2">
+          Cliente:<input type="text" value="Escribe">
+        </div>
+        
+         
+         </div>
+
+
 
 
           <div class="modal-footer">
@@ -331,82 +295,134 @@
   </div>
   
 
-    <!--MODAL ELIMINAR-->
-    <div class="modal fade" id="elimiarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Producto</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ¿Esta seguro de eliminar este Producto?<br>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="ComfirmElim()">Confirmar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+ 
 
 
      <!--ENTRADAS-->
 
-<!--MODAL CREAR ENTRADAS-->
-<div class="modal fade " id="crearEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!--MODAL CREAR ENTRADAS PEDIDO-->
+<div class="modal fade " id="crearentradapedido" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Entrada</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar </h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="col-md-2">
+      <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#crearPedido"><i
+        class="fa-solid fa-circle-chevron-left">
+     
+      </i> </button>
+    </div>
       <div class="modal-body">
-        <form class="row g-3 mt-2" name="formcreaE" action="validacionEntrada">
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label">Producto</label>
-            <select class="form-select" aria-label="Default select example" name="producto" id="tamano">
-              <option selected>Papa noel</option>
-              <option value="1">Africanas</option>
-              <option value="2">Arbol halloween</option>
-            </select>
+        <form class="row g-3 mt-2" name="formcreaE">
+          <div class="col-md-12">
+            <label for="escribirproducto" class="form-label">Selecciona Producto</label>
           </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Fecha</label>
-            <input type="date" class="form-control" id="inputPassword4" name="fecha" required />
+          <div class="col-md-8">
+            <input class="form-control " type="search" id="escribirproducto" placeholder="Marrano... " aria-label="Search">
           </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Stock</label>
-            <input type="number" class="form-control" id="inputPassword4" name="stock" required />
+          <div class="col-md-4">
+            <button class="btn btn-outline-success" >Buscar</button>
           </div>
         </form>
-        <div class="row g-3 mt-2">
+        <div class="row g-3 mt-5 col-md-12 ">
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Entradas agregadas</th>
-                <th scope="col">Producto</th>
-                <th scope="col">Material</th>
-                <th scope="col">Stock</th>
-                <th scope="col">Eliminar</th>
-
+                Marrano de Madera:
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Marrano</td>
-                <td>ceramica</td>
-                <td>100</td>
-                <th scope="row">6</th>
-                <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#elimiarEntrada"></i></td>
+                <div class="col-md-4">
+                  <td><p>Tamaño:</p>
+                  <section>Grande</section>
+                </div>
+                <div class="col-md-4">
+                  <td><p>Stock:</p>
+                  <input type="text" value="55" style="width: 5rem;" disabled>
+                </td>
+                </div>
+                
+              <div class="col-md-4">
+                <td><p>Cantidad</p>
+                <input type="number" style="width: 5rem;">
+              </td>
+              </div>
+              <div class="col-md-4">
+                <td>  
+                  <p>Color</p>
+                  <select class="form-select form-select-sm " style="width:8rem ;">
+                  <option selected disabled>Selecciona</option>
+                  <option value="1">Amarillo</option>
+                  <option value="2">Verde</option>
+                  <option value="3">Rojo</option>
+                  <option value="3">Anaranjao</option>
+                  <option value="3">Blanco</option>
+                  <option value="3">Gris</option></td>
+              </div>
+          <div class="col-md-6">
+                <td>
+                  <input class="form-check-input" type="checkbox" 
+                  id="checkboxNoLabel" value="" aria-label="...">
+                </td>
+              </div>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row g-3 mt-5 col-md-12 ">
+          <table class="table">
+            <thead>
+              <tr>
+                Marrano de Plastico:
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <div class="col-md-4">
+                  <td><p>Tamaño:</p>
+                  <section>Mediano</section>
+                </div>
+                <div class="col-md-4">
+                  <td><p>Stock:</p>
+                  <input type="text" value="22" style="width: 5rem;" disabled>
+                </td>
+                </div>
+                
+              <div class="col-md-4">
+                <td><p>Cantidad</p>
+                <input type="number" style="width: 5rem;">
+              </td>
+              </div>
+              <div class="col-md-4">
+                <td>  
+                  <p>Color</p>
+                  <select class="form-select form-select-sm " style="width:8rem ;">
+                  <option selected disabled>Selecciona</option>
+                  <option value="1">Amarillo</option>
+                  <option value="2">Verde</option>
+                  <option value="3">Rojo</option>
+                  <option value="3">Anaranjao</option>
+                  <option value="3">Blanco</option>
+                  <option value="3">Gris</option></td>
+              </div>
+          <div class="col-md-6">
+                <td>
+                  <input class="form-check-input" type="checkbox" 
+                  id="checkboxNoLabel" value="" aria-label="...">
+                </td>
+              </div>
                 
               </tr>
             </tbody>
           </table>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary" onclick="validacionCrearE()">Crear</button>
+
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#crearPedido">Agregar</button>
         </div>
       </div>
     </div>
@@ -477,7 +493,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="ComfirmElim()">Confirmar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Confirmar</button>
         </div>
       </div>
     </div>

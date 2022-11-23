@@ -15,3 +15,6 @@ function validacionEditar(){
         window.location="./clientes.html"
     }
 }
+function ComfirmElim(){
+    alert("Eliminado")
+}
