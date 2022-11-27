@@ -2,16 +2,19 @@ function validacion() {
     if (document.form.nombres.value == "" || document.form.apellidos.value == "" || document.form.documento.value == "" || document.form.telefono.value == "" || document.form.direccion.value == "" || document.form.correo.value == "" || document.form.password.value == "") {
         alert("Ingrese todos los campos")
     } else {
-        if (document.form.telefono.value.length <= 9 || document.form.telefono.value.length >= 11) {
-            alert("Ingrese un numero telefonico valido")
+        if (document.form.password.value = !document.form.rpassword.value) {
+            alert("Las contraseñas no coinciden")
         } else {
-            if (document.form.password.value.length <= 7) {
-                alert("Ingrese una contraseña mayor a 7 digitos")
-            }else {window.location="./indexlogueado.html"}
+            if (document.form.telefono.value.length <= 9 || document.form.telefono.value.length >= 11) {
+                alert("Ingrese un numero telefonico valido")
+            } else {
+                if (document.form.password.value.length <= 7) {
+                    alert("Ingrese una contraseña mayor a 7 digitos")
+                } else { window.location = "./indexlogueado.html" }
+            }
         }
     }
 }
-
 
 
 function validacionProducto() {

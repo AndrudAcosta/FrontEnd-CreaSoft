@@ -144,12 +144,15 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col">ID</th>
+              <th scope="col">IDCliente</th>
+              <th scope="col">IDUsuario</th>
               <th scope="col">Nombres</th>
               <th scope="col">Apellidos</th>
               <th scope="col">Direccion</th>
               <th scope="col">Correo</th>
               <th scope="col">Telefono</th>
+              <th scope="col">Estado</th>
+              <th scope="col"></th>
               <th scope="col">Editar</th>
               <th scope="col">Eliminar</th>
             </tr>
@@ -157,11 +160,21 @@
           <tbody>
             <tr>
               <th scope="row">1</th>
+              <th scope="row">1</th>
               <td>Cristian David</td>
               <td>Jaramillo Londono</td>
               <td>carr 76a #3c 35</td>
-              <td>elrayomacuin1166@gmail.com</td>
+              <td>cris@gmail.com</td>
               <td>3059392253</td>
+              <td><p id="estado"></td>
+              <td>
+                <div class="custom-control custom-switch col-1">
+                  <input type="checkbox" class="custom-control-input" id="switch" onclick="cambio()" checked="">
+                  <label class="custom-control-label" for="switch"></label>
+                </div>
+              
+              </td>
+
               <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarCliente"></i></td>
               <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#elimiarCliente"></i></td>
             </tr>
@@ -212,7 +225,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary" onclick="validacionCrear()">Crear</button>
-      </div>
+      </div> 
     </div>
   </div>
 </div>

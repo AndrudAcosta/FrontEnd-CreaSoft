@@ -1,29 +1,56 @@
 function validacionCrear(){
     if(document.formcrea.nombre.value=="" || document.formcrea.descripcion.value==""  || document.formcrea.material.value=="" || document.formcrea.stock.value=="" || document.formcrea.tamano.value=="" || document.formcrea.color.value=="" || document.formcrea.precio.value==""){
         alert("Ingrese todos los campos")
-    }else{
-        alert("Producto creado")
-        window.location="./productos.html"
+    }else {
+        if (document.formcrea.stock.value <= 0 ||document.formcrea.precio.value <= 0) {
+            alert("No ingrese valores negativos")
+        } else {
+            alert("Producto creado")
+            window.location="./productos.html"
+            } 
+        }
     }
-}
+  
+
 
 function validacionEditar(){
-    if(document.formeditar.nombre.value=="" || document.formeditar.descripcion.value==""  || document.formeditar.material.value=="" || document.formeditar.stock.value=="" || document.formeditar.tamano.value=="" || document.formeditar.color.value=="" || document.formeditar.precio.value=="" ){
+    if(document.formeditar.nombre.value=="" || document.formeditar.descripcion.value==""  || document.formeditar.material.value=="" ||  document.formeditar.tamano.value=="" || document.formeditar.color.value=="" || document.formeditar.precio.value=="" ){
         alert("Ingrese todos los campos")
-    }else{
-        alert("Producto Actualizado")
-        window.location="./productos.html"
+    }else {
+        if (document.formeditar.precio.value <= 0 ) {
+            alert("No ingrese valores negativos")
+        } else {
+            alert("Producto creado")
+            window.location="./productos.html"
+            } 
+        }
     }
-}
-
+ 
 function validacionCrearE(){
     if(document.formcreaE.producto.value=="" || document.formcreaE.fecha.value==""   || document.formcreaE.stock.value==""){
         alert("Ingrese todos los campos")
-    }else{
-        alert("Entrada creada")
-        window.location="./productos.html"
+    }else {
+        if (document.formcreaE.stock.value <= 0 ) {
+            alert("No ingrese valores negativos")
+        } else {
+            alert("Entrada creado")
+            window.location="./productos.html"
+            } 
+        }
     }
-}
+
+    function cambio(){
+
+        if(document.getElementById("switch").Checked){
+            document.getElementById("estado").
+            textContent="Activo"
+        }else{
+            document.getElementById("estado").
+            textContent="Inactivo"
+        }
+    }
+    
+
 function ComfirmElim(){
     alert("Eliminado")
 }
