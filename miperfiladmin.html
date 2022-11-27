@@ -196,6 +196,12 @@
                                             <p class="text-muted mb-0">Calle 3C Norte # 53 - 88 Medelin-Colombia</p>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-9">
+                                          <i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -289,6 +295,50 @@
   </div>
 
 </body>
+
+<div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Perfil</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3 mt-2" name="formeditar" action="validacion">
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="inputEmail4" name="nombres" required />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="inputPassword4" name="apellidos" required />
+          </div>
+          <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Documento</label>
+            <input type="number" class="form-control" id="inputEmail4" name="documento" required />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Telefono</label>
+            <input type="number" class="form-control" id="inputPassword4" name="telefono" required />
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Correo Electronico</label>
+            <input type="email" class="form-control" id="inputCity" name="correo" required />
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Direccion</label>
+            <input type="email" class="form-control" id="inputCity" name="direccion" required />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" onclick="validacionEditar()">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script> myModal = document.getElementById('myModal')
   const myInput = document.getElementById('myInput')
 

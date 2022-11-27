@@ -156,6 +156,7 @@
                 <th scope="col">Telefono</th>
                 <th scope="col">Correo</th>
                 <th scope="col">Rol</th>
+                <th scope="col">Estado</th>
                 <th scope="col">Acceso</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Eliminar</th>
@@ -170,7 +171,14 @@
                 <td>3059392253</td>
                 <td>amacosta@gmail.com</td>
                 <td>Administrador</td>
-                <td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td>
+                <td><p id="estado"></p></td>
+                <td>
+                <div class="custom-control custom-switch col-1">
+                  <input class="custom-control-input" type="checkbox" role="switch" id="customswitch" onclick="chequeo()" checked="">
+                  <label class="custom-control-label" for="customswitch"></label>
+                </div>
+                </td>
+
                 <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i></td>
                 <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"data-bs-target="#elimiarUsuario"></i></td>
               </tr>
@@ -182,7 +190,13 @@
                 <td>2534123532</td>
                 <td>crisitanjaramillo@gmail.com</td>
                 <td>Administrador</td>
-                <td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td>
+                <td><p id="estado2"></p></td>
+                <td>
+                <div class="custom-control custom-switch col-1">
+                  <input class="custom-control-input" type="checkbox" role="switch" id="customswitch2" onclick="chequeo2()" checked="">
+                  <label class="custom-control-label" for="customswitch2"></label>
+                </div>
+                </td>
                 <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarUsuario"></i></td>
                 <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal"data-bs-target="#elimiarUsuario"></i></td>
               </tr>
@@ -232,10 +246,13 @@
               <label for="inputZip" class="form-label">Contraseña</label>
               <input type="password" class="form-control" id="inputZip" name="password" required />
             </div>
-            <div class="col-12">
+            <div class="col-md-6">
+              <label for="inputZip" class="form-label">Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="inputZip" name="rpassword" required />
+            </div>
+            <div class="col-6">
               <label for="inputCity" class="form-label">Rol</label>
               <select class="form-select" aria-label="Default select example" name="rol" id="rol">
-                <option selected>Selecciona rol</option>
                 <option value="1">Administrador</option>
                 <option value="2">Cliente</option>
               </select>
