@@ -32,9 +32,9 @@
             <div class="row">
                 <div>
                     <a class="btn btn-primary" type="button" href="./indexlogueado.html">
-                      <i class="fa-solid fa-chevron-left"></i> Atras
+                        <i class="fa-solid fa-chevron-left"></i> Atras
                     </a>
-                  </div>
+                </div>
                 <div class="col-lg-4 mt-3">
                     <div class="card mb-4">
                         <div class="card-body text-center">
@@ -93,38 +93,11 @@
                                     <p class="text-muted mb-0">Calle 3C Norte # 53 - 88 Medelin-Colombia</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card mb-4 mb-md-0">
-                                <div class="card-body">
-                                    <p class="mb-4">Mis Pedidos
-                                    </p>
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Pedido</th>
-                                                <th scope="col">Fecha Pedido</th>
-                                                <th scope="col">Estado</th>
-                                                <th scope="col">Total</th>
-                                                <th scope="col">Ver</th>
-                                                <th scope="col"></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>10/11/2022</td>
-                                                <td>Produccion</td>
-                                                <td>$ 321.000</td>
-                                                <td><i class="fa-solid fa-eye" type="button" data-bs-toggle="modal"
-                                                        data-bs-target="#verVenta"></i></td>
-                                                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                                        data-bs-target="#cancelar">CANCELAR</button></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <i class="fa-solid fa-pen" type="button" data-bs-toggle="modal"
+                                        data-bs-target="#editarUsuario"></i>
                                 </div>
                             </div>
                         </div>
@@ -134,6 +107,48 @@
         </div>
     </div>
 </body>
+<div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Perfil</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="row g-3 mt-2" name="cliente" action="validacion">
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="inputEmail4" name="nombres" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="inputPassword4" name="apellidos" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Documento</label>
+                        <input type="number" class="form-control" id="inputEmail4" name="documento" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Telefono</label>
+                        <input type="number" class="form-control" id="inputPassword4" name="telefono" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Correo Electronico</label>
+                        <input type="email" class="form-control" id="inputCity" name="correo" required />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">Direccion</label>
+                        <input type="email" class="form-control" id="inputCity" name="direccion" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="validacionEditarPerfilC()">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <footer class="text-center text-lg-start bg-light text-muted">

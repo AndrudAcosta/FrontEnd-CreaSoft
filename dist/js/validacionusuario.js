@@ -19,23 +19,23 @@ function validacionCrear() {
     }
 }
 
-function chequeo(){
-    if(document.getElementById("customswitch").checked){
+function chequeo() {
+    if (document.getElementById("customswitch").checked) {
         document.getElementById("estado").
-        textContent = "Activo"
-    }else{
+            textContent = "Activo"
+    } else {
         document.getElementById("estado").
-        textContent = "Inactivo"
+            textContent = "Inactivo"
     }
 }
 
-function chequeo2(){
-    if(document.getElementById("customswitch2").checked){
+function chequeo2() {
+    if (document.getElementById("customswitch2").checked) {
         document.getElementById("estado2").
-        textContent = "Activo"
-    }else{
+            textContent = "Activo"
+    } else {
         document.getElementById("estado2").
-        textContent = "Inactivo"
+            textContent = "Inactivo"
     }
 }
 
@@ -43,11 +43,64 @@ function validacionEditar() {
     if (document.formeditar.nombres.value == "" || document.formeditar.apellidos.value == "" || document.formeditar.documento.value == "" || document.formeditar.telefono.value == "" || document.formeditar.correo.value == "" || document.formeditar.rol.value == "") {
         alert("Ingrese todos los campos")
     } else {
-        alert("Usuario Actualizado")
-        window.location = "./usuarios.html"
+        if (document.formcrea.telefono.value.length <= 9 || document.formcrea.telefono.value.length >= 11) {
+            alert("Ingrese un numero telefonico valido")
+        } else {
+            alert("Usuario Actualizado")
+            window.location = "./usuarios.html"
+        }
     }
 }
 
 function validacioneliminar() {
     alert("Eliminado con exito")
+}
+
+function validacionEditarPerfil() {
+    if (document.perfil.nombres.value == "" || document.perfil.apellidos.value == "" || document.perfil.documento.value == "" || document.perfil.telefono.value == "" || document.perfil.correo.value == "" || document.perfil.direccion.value == "") {
+        alert("Ingrese todos los campos")
+    } else {
+        if (document.perfil.telefono.value.length <= 9 || document.perfil.telefono.value.length >= 11) {
+            alert("Ingrese un numero telefonico valido")
+        } else {
+            alert("Perfil Actualizado")
+            window.location = "./miperfiladmin.html"
+        }
+    }
+}
+
+function validacionEditarPerfilC() {
+    if (document.cliente.nombres.value == "" || document.cliente.apellidos.value == "" || document.cliente.documento.value == "" || document.cliente.telefono.value == "" || document.cliente.correo.value == "" || document.cliente.direccion.value == "") {
+        alert("Ingrese todos los campos")
+    } else {
+        if (document.cliente.telefono.value.length <= 9 || document.cliente.telefono.value.length >= 11) {
+            alert("Ingrese un numero telefonico valido")
+        } else {
+            alert("Perfil Actualizado")
+            window.location = "./miperfilcliente.html"
+        }
+    }
+}
+
+function sololetras(e){
+    key=e.keyCode || e.which;
+
+    teclado=String.fromCharCode(key).toLowerCase();
+
+    letras=" abcdefghijklmnñopqrstuvwzyx";
+
+    especiales="8-37-38-46-164";
+
+    teclado_especial=false;
+
+    for(var i in especiales){
+        if(key==especiales[i]){
+            teclado_especial=true;break
+        }
+    }
+
+    if(letras.indexOf(teclado) ==-1 && !teclado_especial){
+        return false;
+    }
+
 }
