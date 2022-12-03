@@ -10,7 +10,7 @@ function validacionCrear(){
         }       
     }
 }
-
+ 
 function validacionEditar(){
     if(document.formeditar.nombres.value=="" || document.formeditar.apellidos.value==""  || document.formeditar.direccion.value=="" || document.formeditar.correo.value=="" || document.formeditar.telefono.value==""){
         alert("Ingrese todos los campos")
@@ -24,16 +24,16 @@ function validacionEditar(){
     }
 }
 
-function cambio(){
-
-    if(document.getElementById("switch").Checked){
+function chequeo(){
+    if(document.getElementById("customswitch").checked){
         document.getElementById("estado").
-        textContent="Activo"
+        textContent = "Activo"
     }else{
         document.getElementById("estado").
-        textContent="Inactivo"
+        textContent = "Inactivo"
     }
 }
+
 
 
 

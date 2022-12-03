@@ -88,7 +88,7 @@
                 <p>
                   Clientes
                 </p>
-              </a>
+              </a> 
             </li>
             <li class="nav-item">
               <a href="productos.html" class="nav-link" id="productos">
@@ -175,14 +175,13 @@
                 <td>grande</td>
                 <td>azul</td>
                 <td>$100</td>
-                <td><p id="estado"></td>
-                  <td>
-                    <div class="custom-control custom-switch col-1">
-                      <input type="checkbox" class="custom-control-input" id="switch" onclick="cambio()" checked="">
-                      <label class="custom-control-label" for="switch"></label>
-                    </div>
-                  
-                  </td>
+                <td><p id="estado"></p></td>
+                <td>
+                <div class="custom-control custom-switch col-1">
+                  <input class="custom-control-input" type="checkbox" role="switch" id="customswitch" onclick="chequeo()" checked="">
+                  <label class="custom-control-label" for="customswitch"></label>
+                </div>
+                </td>
                 <td><i class="fa-solid fa-pen" type="button" data-bs-toggle="modal" data-bs-target="#editarProducto"></i></td>
                 <td><i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#elimiarProducto"></i></td>
                 <td><i class="fa-solid fa-eye" type="button" data-bs-toggle="modal" data-bs-target="#HistorialE"></i></td>
@@ -235,7 +234,7 @@
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Stock</label>
-              <input type="number" class="form-control" id="inputPassword4" name="stock" required />
+              <input type="number" class="form-control" id="inputPassword4" name="stock" onkeypress="return solonumeros(event)">
             </div>
             <div class="col-md-6">
               <label for="inputCity" class="form-label">Tamaño</label>
@@ -256,7 +255,10 @@
 
             <div class="col-md-6">
               <label for="inputEmail4" class="form-label">Precio</label>
-              <input type="number" class="form-control" id="inputEmail4" name="precio" required />
+              <input type="number" class="form-control" id="inputEmail4" name="precio" onkeypress="return solonumeros(event)">
+            </div>
+            <div class="row g-2 mt-2">
+              <button type="button" class="btn btn-primary" onclick="validacionCrear()"></i> Agregar Producto</button>
             </div>
           </form>
           <div class="row g-3 mt-2">
@@ -281,7 +283,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" onclick="validacionCrear()">Crear</button>
+            <button type="button" class="btn btn-primary" onclick="AgregarProducto()">Crear</button>
           </div>
         </div>
       </div>
@@ -346,8 +348,9 @@
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Precio</label>
-              <input type="number" class="form-control" id="inputPassword4" name="precio" required />
+              <input type="number" class="form-control" id="inputPassword4" name="precio" onkeypress="return solonumeros(event)">
             </div>
+            
           </form>
 
 
@@ -361,7 +364,7 @@
   </div>
   
 
-    <!--MODAL ELIMINAR-->
+    <!--MODAL ELIMINAR PRODUCTOS-->
     <div class="modal fade" id="elimiarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -402,12 +405,20 @@
             </select>
           </div>
           <div class="col-md-6">
+            <label for="inputCity" class="form-label">Tamaño</label>
+            <select class="form-select" aria-label="Default select example" name="tamano" id="tamano">
+              <option selected>Grande</option>
+              <option value="1">Mediano</option>
+              <option value="2">Pequeño</option>
+            </select>
+          </div>
+          <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Fecha</label>
             <input type="date" class="form-control" id="inputPassword4" name="fecha" required />
           </div>
           <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Stock</label>
-            <input type="number" class="form-control" id="inputPassword4" name="stock" required />
+            <input type="number" class="form-control" id="inputPassword4" name="stock" onkeypress="return solonumeros(event)">
           </div>
         
         </form>
@@ -440,6 +451,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="AgregarEntrada()">Crear</button>
           
       </div>
     </div>
@@ -462,9 +474,18 @@
             <label for="inputPassword4" class="form-label">Producto</label>
             <input class="form-control" type="text" value="marrano" disabled readonly />
           </div>
+       
           <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Entradas totales</label>
             <input class="form-control" type="text" value="56" disabled readonly />
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Tamaño</label>
+            <select class="form-select" aria-label="Default select example" name="tamano" id="tamano">
+              <option selected>Grande</option>
+              <option value="1">Mediano</option>
+              <option value="2">Pequeño</option>
+            </select>
           </div>
           <div class="col-md-6">
             <label for="inputPassword4" class="form-label">Fecha</label>
@@ -527,6 +548,7 @@
   
 
 <script src="./dist/js/validacionProducto.js"></script>
+<script src="./dist/js/validacionformulario.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>

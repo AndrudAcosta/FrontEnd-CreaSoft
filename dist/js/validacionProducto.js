@@ -5,12 +5,12 @@ function validacionCrear(){
         if (document.formcrea.stock.value <= 0 ||document.formcrea.precio.value <= 0) {
             alert("No ingrese valores negativos")
         } else {
-            alert("Producto creado")
-            window.location="./productos.html"
+            alert("Producto agregado")
+           
             } 
         }
     }
-  
+   
 
 
 function validacionEditar(){
@@ -33,21 +33,28 @@ function validacionCrearE(){
         if (document.formcreaE.stock.value <= 0 ) {
             alert("No ingrese valores negativos")
         } else {
-            alert("Entrada creado")
-            window.location="./productos.html"
-            } 
+            alert("Entrada agregada")
+            }
         }
     }
-
-    function cambio(){
-
-        if(document.getElementById("switch").Checked){
+    function chequeo(){
+        if(document.getElementById("customswitch").checked){
             document.getElementById("estado").
-            textContent="Activo"
+            textContent = "Activo"
         }else{
             document.getElementById("estado").
-            textContent="Inactivo"
+            textContent = "Inactivo"
         }
+    }
+    
+function AgregarEntrada(){
+    alert("Entradas creadas")
+    window.location="./productos.html"
+    }
+    
+function AgregarProducto(){
+    alert("Productos creados")
+    window.location="./productos.html"
     }
     
 

@@ -234,7 +234,7 @@
             </div>
             <div class="col-md-6">
               <label for="inputPassword4" class="form-label">Cantidad</label>
-              <input type="number" class="form-control" id="inputPassword4" name="cantidad" required />
+              <input type="number" class="form-control" id="inputPassword4" name="cantidad" onkeypress="return solonumeros(event)">
             </div>
           </form>
         </div>
@@ -345,6 +345,7 @@
 </footer>
 <!-- Footer -->
 <script src="./dist/js/validacionesIndex.js"></script>
+<script src="./dist/js/validacionformulario.js"></script>
 <script src="plugins/jquery/jquery.min.js"></script>
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>

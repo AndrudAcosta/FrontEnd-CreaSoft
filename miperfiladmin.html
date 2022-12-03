@@ -190,7 +190,7 @@
                                     <hr>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <p class="mb-0">Address</p>
+                                            <p class="mb-0">Direccion</p>
                                         </div>
                                         <div class="col-sm-9">
                                             <p class="text-muted mb-0">Calle 3C Norte # 53 - 88 Medelin-Colombia</p>
@@ -216,82 +216,6 @@
     <footer class="main-footer">
       <strong>Copyright &copy; 2022 <a>CreaSoft</a>.</strong>
     </footer>
-  </div>
-
-  <!--MODAL VISUALIZAR VENTA-->
-  <div class="modal fade" id="verVenta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Detalles Venta</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form class="row g-3 mt-2" name="formeditar" action="validacion">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Nombres</label>
-              <input type="text" class="form-control" value="Gisella" disabled readonly />
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Apellidos</label>
-              <input class="form-control" type="text" value="Mosquera Arroyo" disabled readonly />
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Documento</label>
-              <input class="form-control" type="text" value="100123123" disabled readonly />
-            </div>
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Telefono</label>
-              <input class="form-control" type="text" value="3120324232" disabled readonly />
-            </div>
-            <div class="col-md-12">
-              <label for="inputEmail4" class="form-label">Direccion</label>
-              <input class="form-control" type="text" value="Calle 104E Diagonal 1" disabled readonly />
-            </div>
-            <div class="col-md-4">
-              <label for="inputEmail4" class="form-label">Fecha Inicio</label>
-              <input class="form-control" type="text" value="10/11/2022" disabled readonly />
-            </div>
-            <div class="col-md-4">
-              <label for="inputEmail4" class="form-label">Fecha Fin</label>
-              <input class="form-control" type="text" value="19/11/2022" disabled readonly />
-            </div>
-            <div class="col-md-4">
-              <label for="inputEmail4" class="form-label">Estado</label>
-              <input class="form-control" type="text" value="Finalizado" disabled readonly />
-            </div>
-            <div class="col-md-12 mt-5">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Subtotal</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Muñeco de Nieve</td>
-                    <td>3</td>
-                    <td>$ 321.000</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="col-md-4">
-              <label for="inputEmail4" class="form-label">Total: </label>
-              <input class="form-control" type="text" value="$ 321.000" disabled readonly />
-            </div>
-          </form>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-    </div>
   </div>
 
 </body>
@@ -321,13 +245,16 @@
             <label for="inputPassword4" class="form-label">Telefono</label>
             <input type="number" class="form-control" id="inputPassword4" name="telefono" required />
           </div>
-          <div class="col-md-6">
+          <div class="col-md-12">
+            <label for="inputCity" class="form-label">Direccion</label>
+            <input type="text" class="form-control" id="inputCity" name="direccion" required />
+          </div><div class="col-md-6">
             <label for="inputCity" class="form-label">Correo Electronico</label>
             <input type="email" class="form-control" id="inputCity" name="correo" required />
           </div>
           <div class="col-md-6">
-            <label for="inputCity" class="form-label">Direccion</label>
-            <input type="email" class="form-control" id="inputCity" name="direccion" required />
+            <label for="inputCity" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="inputCity" name="direccion" required />
           </div>
         </form>
       </div>
